@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\CRUDEstados\CRUDEstados\bin\Debug\CRUDEstados.exe.config
+C:\Users\aguil\source\bootcamp\c#\CRUDEstados\CRUDEstados\bin\Debug\CRUDEstados.exe
+C:\Users\aguil\source\bootcamp\c#\CRUDEstados\CRUDEstados\bin\Debug\CRUDEstados.pdb
+C:\Users\aguil\source\bootcamp\c#\CRUDEstados\CRUDEstados\obj\Debug\CRUDEstados.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\CRUDEstados\CRUDEstados\obj\Debug\CRUDEstados.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\CRUDEstados\CRUDEstados\obj\Debug\CRUDEstados.exe
+C:\Users\aguil\source\bootcamp\c#\CRUDEstados\CRUDEstados\obj\Debug\CRUDEstados.pdb

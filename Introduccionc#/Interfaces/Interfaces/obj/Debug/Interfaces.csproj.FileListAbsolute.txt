@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\Interfaces\Interfaces\bin\Debug\Interfaces.exe.config
+C:\Users\aguil\source\bootcamp\c#\Interfaces\Interfaces\bin\Debug\Interfaces.exe
+C:\Users\aguil\source\bootcamp\c#\Interfaces\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\aguil\source\bootcamp\c#\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\Interfaces\Interfaces\obj\Debug\Interfaces.exe
+C:\Users\aguil\source\bootcamp\c#\Interfaces\Interfaces\obj\Debug\Interfaces.pdb

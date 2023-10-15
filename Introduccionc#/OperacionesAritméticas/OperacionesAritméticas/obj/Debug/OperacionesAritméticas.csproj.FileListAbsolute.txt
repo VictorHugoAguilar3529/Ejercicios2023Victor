@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\OperacionesAritméticas\OperacionesAritméticas\bin\Debug\OperacionesAritméticas.exe.config
+C:\Users\aguil\source\bootcamp\c#\OperacionesAritméticas\OperacionesAritméticas\bin\Debug\OperacionesAritméticas.exe
+C:\Users\aguil\source\bootcamp\c#\OperacionesAritméticas\OperacionesAritméticas\bin\Debug\OperacionesAritméticas.pdb
+C:\Users\aguil\source\bootcamp\c#\OperacionesAritméticas\OperacionesAritméticas\obj\Debug\OperacionesAritméticas.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\OperacionesAritméticas\OperacionesAritméticas\obj\Debug\OperacionesAritméticas.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\OperacionesAritméticas\OperacionesAritméticas\obj\Debug\OperacionesAritméticas.exe
+C:\Users\aguil\source\bootcamp\c#\OperacionesAritméticas\OperacionesAritméticas\obj\Debug\OperacionesAritméticas.pdb

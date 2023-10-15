@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\CRUDEstatus\CRUDEstatus\bin\Debug\CRUDEstatus.exe.config
+C:\Users\aguil\source\bootcamp\c#\CRUDEstatus\CRUDEstatus\bin\Debug\CRUDEstatus.exe
+C:\Users\aguil\source\bootcamp\c#\CRUDEstatus\CRUDEstatus\bin\Debug\CRUDEstatus.pdb
+C:\Users\aguil\source\bootcamp\c#\CRUDEstatus\CRUDEstatus\obj\Debug\CRUDEstatus.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\CRUDEstatus\CRUDEstatus\obj\Debug\CRUDEstatus.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\CRUDEstatus\CRUDEstatus\obj\Debug\CRUDEstatus.exe
+C:\Users\aguil\source\bootcamp\c#\CRUDEstatus\CRUDEstatus\obj\Debug\CRUDEstatus.pdb

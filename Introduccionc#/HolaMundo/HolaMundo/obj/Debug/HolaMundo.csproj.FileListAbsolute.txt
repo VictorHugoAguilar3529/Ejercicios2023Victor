@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\HolaMundo\HolaMundo\bin\Debug\HolaMundo.exe.config
+C:\Users\aguil\source\bootcamp\c#\HolaMundo\HolaMundo\bin\Debug\HolaMundo.exe
+C:\Users\aguil\source\bootcamp\c#\HolaMundo\HolaMundo\bin\Debug\HolaMundo.pdb
+C:\Users\aguil\source\bootcamp\c#\HolaMundo\HolaMundo\obj\Debug\HolaMundo.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\HolaMundo\HolaMundo\obj\Debug\HolaMundo.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\HolaMundo\HolaMundo\obj\Debug\HolaMundo.exe
+C:\Users\aguil\source\bootcamp\c#\HolaMundo\HolaMundo\obj\Debug\HolaMundo.pdb

@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\IntroduccionCS\IntroduccionCS\obj\Debug\IntroduccionCS.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\IntroduccionCS\IntroduccionCS\obj\Debug\IntroduccionCS.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\IntroduccionCS\IntroduccionCS\bin\Debug\IntroduccionCS.exe.config
+C:\Users\aguil\source\bootcamp\c#\IntroduccionCS\IntroduccionCS\bin\Debug\IntroduccionCS.exe
+C:\Users\aguil\source\bootcamp\c#\IntroduccionCS\IntroduccionCS\bin\Debug\IntroduccionCS.pdb
+C:\Users\aguil\source\bootcamp\c#\IntroduccionCS\IntroduccionCS\obj\Debug\IntroduccionCS.exe
+C:\Users\aguil\source\bootcamp\c#\IntroduccionCS\IntroduccionCS\obj\Debug\IntroduccionCS.pdb

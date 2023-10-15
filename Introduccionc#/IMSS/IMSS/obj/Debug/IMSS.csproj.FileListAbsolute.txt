@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\IMSS\IMSS\bin\Debug\IMSS.exe.config
+C:\Users\aguil\source\bootcamp\c#\IMSS\IMSS\bin\Debug\IMSS.exe
+C:\Users\aguil\source\bootcamp\c#\IMSS\IMSS\bin\Debug\IMSS.pdb
+C:\Users\aguil\source\bootcamp\c#\IMSS\IMSS\obj\Debug\IMSS.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\IMSS\IMSS\obj\Debug\IMSS.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\IMSS\IMSS\obj\Debug\IMSS.exe
+C:\Users\aguil\source\bootcamp\c#\IMSS\IMSS\obj\Debug\IMSS.pdb

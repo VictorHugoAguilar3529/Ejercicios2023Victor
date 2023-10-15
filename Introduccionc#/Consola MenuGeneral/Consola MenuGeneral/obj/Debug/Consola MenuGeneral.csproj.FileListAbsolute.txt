@@ -1,0 +1,7 @@
+C:\Users\aguil\source\bootcamp\c#\Consola MenuGeneral\Consola MenuGeneral\bin\Debug\Consola MenuGeneral.exe.config
+C:\Users\aguil\source\bootcamp\c#\Consola MenuGeneral\Consola MenuGeneral\bin\Debug\Consola MenuGeneral.exe
+C:\Users\aguil\source\bootcamp\c#\Consola MenuGeneral\Consola MenuGeneral\bin\Debug\Consola MenuGeneral.pdb
+C:\Users\aguil\source\bootcamp\c#\Consola MenuGeneral\Consola MenuGeneral\obj\Debug\Consola MenuGeneral.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\c#\Consola MenuGeneral\Consola MenuGeneral\obj\Debug\Consola MenuGeneral.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\c#\Consola MenuGeneral\Consola MenuGeneral\obj\Debug\Consola MenuGeneral.exe
+C:\Users\aguil\source\bootcamp\c#\Consola MenuGeneral\Consola MenuGeneral\obj\Debug\Consola MenuGeneral.pdb
