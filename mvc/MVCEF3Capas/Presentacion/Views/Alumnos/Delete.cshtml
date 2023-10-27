@@ -1,0 +1,114 @@
+﻿@model Entidades.Alumnos
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Esta seguro que desea eliminar algo?</h3>
+<div>
+    <h4>Alumnos</h4>
+    <hr />
+    <div class="list-group">
+        <div class="list-group list-group-horizontal">
+            <P class="list-group-item fw-bold">
+                Nombre
+            </P>
+            <P class="list-group-item">
+                @Html.DisplayFor(model => model.nombre)
+            </P>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.primerApellido)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.primerApellido)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.segundoApellido)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.segundoApellido)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.correo)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.correo)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.telefono)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.telefono)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.fechaNacimiento)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.fechaNacimiento)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.curp)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.curp)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.sueldo)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.sueldo)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold">
+                @Html.DisplayNameFor(model => model.idEstadoOrigen)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.idEstadoOrigen)
+            </p>
+        </div>
+        <div class="list-group list-group-horizontal">
+            <p class="list-group-item fw-bold ">
+                @Html.DisplayNameFor(model => model.idEstatus)
+            </p>
+
+            <p class="list-group-item">
+                @Html.DisplayFor(model => model.idEstatus)
+            </p>
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar al inicio", "Index")
+        </div>
+    }
+</div>

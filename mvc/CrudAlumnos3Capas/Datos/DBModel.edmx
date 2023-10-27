@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="InstitutoTich3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Alumnos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="60" />
+          <Property Name="primerApellido" Type="varchar" MaxLength="50" />
+          <Property Name="segundoApellido" Type="varchar" MaxLength="50" />
+          <Property Name="correo" Type="varchar" MaxLength="80" />
+          <Property Name="telefono" Type="nchar" MaxLength="10" />
+          <Property Name="fechaNacimiento" Type="date" />
+          <Property Name="curp" Type="char" MaxLength="18" />
+          <Property Name="sueldo" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="idEstadoOrigen" Type="smallint" />
+          <Property Name="idEstatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="CatCursos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="clave" Type="varchar" MaxLength="15" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" MaxLength="1000" />
+          <Property Name="horas" Type="tinyint" />
+          <Property Name="idPreRequisito" Type="smallint" />
+          <Property Name="activo" Type="bit" />
+        </EntityType>
+        <EntityType Name="Cursos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idCatCurso" Type="smallint" />
+          <Property Name="fechaInicio" Type="varchar" MaxLength="50" />
+          <Property Name="fechatermino" Type="varchar" MaxLength="1000" />
+          <Property Name="activo" Type="bit" />
+        </EntityType>
+        <EntityType Name="Estados">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="EstatusAlumnos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="clave" Type="char" MaxLength="10" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_Cursos_CatCursos">
+          <End Role="CatCursos" Type="Self.CatCursos" Multiplicity="0..1" />
+          <End Role="Cursos" Type="Self.Cursos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CatCursos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cursos">
+              <PropertyRef Name="idCatCurso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InstitutoTich3ModelStoreContainer">
+          <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CatCursos" EntityType="Self.CatCursos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cursos" EntityType="Self.Cursos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estados" EntityType="Self.Estados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstatusAlumnos" EntityType="Self.EstatusAlumnos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Cursos_CatCursos" Association="Self.FK_Cursos_CatCursos">
+            <End Role="CatCursos" EntitySet="CatCursos" />
+            <End Role="Cursos" EntitySet="Cursos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InstitutoTich3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Alumnos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="primerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="segundoApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="curp" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+          <Property Name="sueldo" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="idEstadoOrigen" Type="Int16" />
+          <Property Name="idEstatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Estados">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EstatusAlumnos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="clave" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="InstitutoTich3Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alumnos" EntityType="Self.Alumnos" />
+          <EntitySet Name="Estados" EntityType="Self.Estados" />
+          <EntitySet Name="EstatusAlumnos" EntityType="Self.EstatusAlumnos" />
+          <EntitySet Name="CatCursos" EntityType="InstitutoTich3Model.CatCursos" />
+          <EntitySet Name="Cursos" EntityType="InstitutoTich3Model.Cursos" />
+          <AssociationSet Name="FK_Cursos_CatCursos" Association="InstitutoTich3Model.FK_Cursos_CatCursos">
+            <End Role="CatCursos" EntitySet="CatCursos" />
+            <End Role="Cursos" EntitySet="Cursos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CatCursos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="clave" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="horas" Type="Byte" />
+          <Property Name="idPreRequisito" Type="Int16" />
+          <Property Name="activo" Type="Boolean" />
+          <NavigationProperty Name="Cursos" Relationship="InstitutoTich3Model.FK_Cursos_CatCursos" FromRole="CatCursos" ToRole="Cursos" />
+        </EntityType>
+        <EntityType Name="Cursos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCatCurso" Type="Int16" />
+          <Property Name="fechaInicio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechatermino" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="activo" Type="Boolean" />
+          <NavigationProperty Name="CatCursos" Relationship="InstitutoTich3Model.FK_Cursos_CatCursos" FromRole="Cursos" ToRole="CatCursos" />
+        </EntityType>
+        <Association Name="FK_Cursos_CatCursos">
+          <End Type="InstitutoTich3Model.CatCursos" Role="CatCursos" Multiplicity="0..1" />
+          <End Type="InstitutoTich3Model.Cursos" Role="Cursos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CatCursos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cursos">
+              <PropertyRef Name="idCatCurso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InstitutoTich3ModelStoreContainer" CdmEntityContainer="InstitutoTich3Entities">
+          <EntitySetMapping Name="Alumnos">
+            <EntityTypeMapping TypeName="InstitutoTich3Model.Alumnos">
+              <MappingFragment StoreEntitySet="Alumnos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+                <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="curp" ColumnName="curp" />
+                <ScalarProperty Name="sueldo" ColumnName="sueldo" />
+                <ScalarProperty Name="idEstadoOrigen" ColumnName="idEstadoOrigen" />
+                <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estados">
+            <EntityTypeMapping TypeName="InstitutoTich3Model.Estados">
+              <MappingFragment StoreEntitySet="Estados">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstatusAlumnos">
+            <EntityTypeMapping TypeName="InstitutoTich3Model.EstatusAlumnos">
+              <MappingFragment StoreEntitySet="EstatusAlumnos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="clave" ColumnName="clave" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CatCursos">
+            <EntityTypeMapping TypeName="InstitutoTich3Model.CatCursos">
+              <MappingFragment StoreEntitySet="CatCursos">
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="idPreRequisito" ColumnName="idPreRequisito" />
+                <ScalarProperty Name="horas" ColumnName="horas" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="clave" ColumnName="clave" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cursos">
+            <EntityTypeMapping TypeName="InstitutoTich3Model.Cursos">
+              <MappingFragment StoreEntitySet="Cursos">
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="fechatermino" ColumnName="fechatermino" />
+                <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+                <ScalarProperty Name="idCatCurso" ColumnName="idCatCurso" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="f421cf67d8ef4c81869f1256011551a6" Name="Diagram1">
+        <EntityTypeShape EntityType="InstitutoTich3Model.Alumnos" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoTich3Model.Estados" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoTich3Model.EstatusAlumnos" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoTich3Model.CatCursos" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoTich3Model.Cursos" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="InstitutoTich3Model.FK_Cursos_CatCursos" ManuallyRouted="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

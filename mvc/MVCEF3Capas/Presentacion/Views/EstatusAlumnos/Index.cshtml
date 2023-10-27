@@ -1,0 +1,180 @@
+﻿@model IEnumerable<Entidades.EstatusAlumnos>
+
+<p>
+    @Html.ActionLink("Crear", "Create", null, htmlAttributes: new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.clave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td id="tdID">
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }, htmlAttributes: new { @class = "btn btn-warning" })
+                @Html.ActionLink("Detalles", "Details", new { id = item.id }, htmlAttributes: new { @class = "btn btn-success" })
+                @Html.ActionLink("Borrar", "Delete", new { id = item.id }, htmlAttributes: new { @class = "btn btn-danger" })
+                <a href="javascript:void(0)" name="btnEliminar" id="btnEliminar" class="btn btn-secondary" onclick="elimAjx(@item.id)">EliminarAjax</a>
+
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
+<!-- Ventana Modal -->
+<div class="modal fade" id="ventanaModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Encabezado -->
+            <div class="modal-header">
+                <h4 id="tituloModal" class="modal-title">Ti-Capital Humano</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Cuerpo -->
+            <div class="modal-body" id="cuerpoModal">
+                <div class="list-group-horizontal">
+                    <label class=" fw-bold">ID</label>
+                    <label id="lblID"></label>
+                </div>
+                
+                <div class="list-group-horizontal">
+                    <label class=" fw-bold">Clave</label>
+                    <label id="lblClave"></label>
+                </div>
+                
+                <div class="list-group-horizontal">
+                    <label class=" fw-bold">Nombre</label>
+                    <label id="lblNombre"></label>
+                </div>
+                
+            </div>
+
+            <!-- Pie de Ventana -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button id=" btnELimAjax" onclick="ConElimAjax();" type="button">ELiminar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function elimAjx(id) {
+        var urlws = 'http://localhost:5034/api/EstatusAlumnos/'+id; 
+        $.ajax({
+            type: 'GET',
+            url: urlws,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: RecibeJson,
+            error: errorGenerico
+        });
+
+    }
+
+    function ConElimAjax() {
+        var urlws = 'http://localhost:5034/api/EstatusAlumnos/' + $("#lblID").html();
+        $.ajax({
+            type: 'DELETE',
+            url: urlws,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: funcExito,
+            error: errorGenerico
+        });
+
+    }
+
+    function RecibeJson(resultado) {
+
+        try {
+            row = resultado;
+            if (row != null) {
+                $("#lblID").text(row.id);
+                $("#lblClave").text(row.clave);
+                $("#lblNombre").text(row.nombre);
+                $("#ventanaModal").modal('show');
+            }
+            else {
+                alert('La respuesta recibida es incorrecta ' + resultado.d);
+            }
+
+        }
+        catch (ex) {
+            alert('Error al recibir los datos');
+        }
+    }
+
+    function funcExito() {
+        
+        try {
+            alert('Transacción efectuada con éxito');
+            $("#ventanaModal").modal('hide');
+            window.location.reload();
+            
+
+            
+        }
+        catch (ex) {
+            alert('Error al recibir los datos');
+        }
+    }
+
+
+    function errorGenerico(jqXHR, estatus, error) {
+        var msg = '';
+        if (jqXHR.status === 0) {
+            msg = 'No está conectado, favor de verificar su conexión.';
+        }
+        else if (jqXHR.status === 404) {
+            msg = 'Página no encontrada [404]';
+        }
+        else if (jqXHR.status === 500) {
+            msg = 'Error no hay conexión al servidor [500]';
+        }
+        else if (jqXHR.status === 'parseerror') {
+            msg = 'El parseo del JSON es erróneo.';
+        }
+        else if (jqXHR.status === 'timeout') {
+            $('body').addClass('loaded');
+        }
+        else if (jqXHR.status === 'abort') {
+            msg = 'La petición Ajax fue abortada.';
+        }
+        else {
+            msg = 'Error no conocido. ';
+            console.log(exception);
+        }
+        alert(msg);
+    }
+
+
+
+
+</script>

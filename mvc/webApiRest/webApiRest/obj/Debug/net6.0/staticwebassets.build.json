@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DMkZEak/rLj3JeMN06JPZCB0G+Qob9mgEbAnbeoLABA=",
+  "Source": "webApiRest",
+  "BasePath": "_content/webApiRest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

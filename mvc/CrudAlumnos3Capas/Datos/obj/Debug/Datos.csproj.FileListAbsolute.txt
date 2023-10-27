@@ -1,0 +1,2 @@
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\CrudAlumnos3Capas\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\CrudAlumnos3Capas\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache

@@ -1,0 +1,60 @@
+﻿@model Negocio.ServiceReference1.ItemTablaISR
+
+<div>
+    <h4>Tabla ISR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CuotaFija)
+        </dt>
+
+        <dd>
+           $ @Html.DisplayFor(model => model.CuotaFija)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExedLimInf)
+        </dt>
+
+        <dd>
+           $ @Html.DisplayFor(model => model.ExedLimInf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LimInf)
+        </dt>
+
+        <dd>
+           $ @Html.DisplayFor(model => model.LimInf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LimSup)
+        </dt>
+
+        <dd>
+           $ @Html.DisplayFor(model => model.LimSup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subsidio)
+        </dt>
+
+        <dd>
+           $ @Html.DisplayFor(model => model.Subsidio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isr)
+        </dt>
+
+        <dd>
+           $ @Html.DisplayFor(model => model.isr)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Regresar al inicio", "Index")
+</p>

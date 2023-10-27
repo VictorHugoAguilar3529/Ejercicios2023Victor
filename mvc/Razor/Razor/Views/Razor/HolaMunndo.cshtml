@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "HolaMunndo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HolaMunndo</h2>
+
+<h2>HolaMundo</h2>
+
+@{
+    <p>Bienvenido</p>
+    string fecha =Convert.ToString( DateTime.Now);
+<p>Hoy es @fecha</p>
+    var saludo = "";
+    if (DateTime.Now.Hour > 18)
+    {
+        saludo = "Buenas noches";
+    }
+    else if (DateTime.Now.Hour > 12)
+    {
+        saludo = "Buenas Dardes";
+    }
+    else if (DateTime.Now.Hour < 12)
+    {
+        saludo = "Buennos dias";
+    }
+    <p>@saludo </p>
+
+}
+
+
+@{
+    var suma = 0;
+    for (var i = 1; i <= 10; i++)
+    {
+        var id = "p" + 1.ToString();
+        <p> id="@id">Parrafo con id: @id</p>
+
+        suma += i;
+
+
+        
+    }
+<p>@suma</p>
+}
+
+@{
+    <p> el url es @Request.FilePath</p>
+    <p>File path request file: @Request.RequestType</p>
+    <p>Request.mapPath(Request.FilePath): @Request.MapPath(Request.FilePath)</p>
+    <p>Request.RquestTipe:  @Request.RequestType</p>
+
+}
+
+@{
+    Dictionary<string, string> dictionary = new Dictionary<string, string>()
+{
+        {"Http","Es un protocoloo de acceso"},
+        {"CLAse","Es una plantilla para la creacion de objetos"},
+        {"HTML","Es el lenguaje de marcado que se utiliza"}
+    };
+<dt>Http</dt>
+<dd>@dictionary["Http"]</dd>
+<dt>CLAse</dt>
+<dd>@dictionary["CLAse"]</dd>
+<dt>HTML</dt>
+<dd>@dictionary["HTML"]</dd>
+}
+
+@{
+    foreach (var variable in Request.ServerVariables)
+    {
+        <li>@variable</li>
+    }
+}

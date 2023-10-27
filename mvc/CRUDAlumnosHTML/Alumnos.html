@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<title>
+	 TI - Capital Humano - HTML Básico Dat
+</title>
+<script type="text/javascript" src="Alumnos.js"></script>
+</head>
+<body>
+        <div>
+            <fieldset>
+                <legend>Alumno</legend>
+                <input type="image" src="yo.jpg" width="150px" height="150px" > <br>                    
+                <label for="id">id:</label><br>
+                <input type="id" id="id" name="id" value="id" placeholder="Introduzca id"><br>
+                <label for="Nombre">Nombre:</label><br>
+                <input type="text" id="Nombre" name="Nombre" placeholder="Introduzca nombre"><br><br>
+                <label for="Edad">Edad:</label><br>
+                <input type="text" id="Edad" name="Edad" placeholder="Introduzca su edad"><br><br>
+                <label for="estado">Estado de Origen</label>            
+                <select id="estado">
+                  <option value="1">Hidalgo</option>
+                  <option value="2">Michoacán</option>
+                  <option value="3">Estado de México</option>
+                  <option value="4">Zacatecas</option>
+                </select> <br>
+                <label><input type="checkbox" id="Estatus" value=""/> Estatus</label><br>  
+                <button id="button1" onclick="return enviarFormulario();">Consultar</button>                    
+        </fieldset>
+        </div>
+        <div id="error"></div>
+        <hr />
+        <footer>
+            <p>&copy; 2021 - Control Escolar TICH</p>
+        </footer>        
+</body>
+</html>

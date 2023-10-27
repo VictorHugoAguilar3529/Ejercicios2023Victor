@@ -1,0 +1,13 @@
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\obj\Debug\WCFAlumnos.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\obj\Debug\WCFAlumnos.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\nombre de WCFAlumnos.dll.config
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\nombre de WCFAlumnos.dll
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\nombre de WCFAlumnos.pdb
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\Datos.dll
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\Entidades.dll
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\Negocio.dll
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\Newtonsoft.Json.dll
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\bin\Newtonsoft.Json.xml
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\obj\Debug\WCFAlumnos.csproj.CopyComplete
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\obj\Debug\nombre de WCFAlumnos.dll
+C:\Users\aguil\source\bootcamp\Tichoct2023Victor\nombre de WCFAlumnos\nombre de WCFAlumnos\obj\Debug\nombre de WCFAlumnos.pdb

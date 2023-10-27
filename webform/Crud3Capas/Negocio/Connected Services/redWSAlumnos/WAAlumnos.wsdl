@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CalcularISR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularISRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalcularISRResult" type="tns:ItemTablaISR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ItemTablaISR">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LimInf" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="LimSup" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuotaFija" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExedLimInf" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Subsidio" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="isr" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CalcularIMMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularIMMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalcularIMMSResult" type="tns:AportacionesIMSS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AportacionesIMSS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EnfermedadMaternidad" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvalidezVida" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Retiro" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cesantía" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Infonavit" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CalcularISRSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularISR" />
+  </wsdl:message>
+  <wsdl:message name="CalcularISRSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularISRResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularIMMSSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularIMMS" />
+  </wsdl:message>
+  <wsdl:message name="CalcularIMMSSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularIMMSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WAAlumnosSoap">
+    <wsdl:operation name="CalcularISR">
+      <wsdl:input message="tns:CalcularISRSoapIn" />
+      <wsdl:output message="tns:CalcularISRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularIMMS">
+      <wsdl:input message="tns:CalcularIMMSSoapIn" />
+      <wsdl:output message="tns:CalcularIMMSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WAAlumnosSoap" type="tns:WAAlumnosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CalcularISR">
+      <soap:operation soapAction="http://tempuri.org/CalcularISR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularIMMS">
+      <soap:operation soapAction="http://tempuri.org/CalcularIMMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WAAlumnosSoap12" type="tns:WAAlumnosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CalcularISR">
+      <soap12:operation soapAction="http://tempuri.org/CalcularISR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularIMMS">
+      <soap12:operation soapAction="http://tempuri.org/CalcularIMMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WAAlumnos">
+    <wsdl:port name="WAAlumnosSoap" binding="tns:WAAlumnosSoap">
+      <soap:address location="http://localhost:50120/WAAlumnos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WAAlumnosSoap12" binding="tns:WAAlumnosSoap12">
+      <soap12:address location="http://localhost:50120/WAAlumnos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

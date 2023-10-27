@@ -1,0 +1,10 @@
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\bin\Debug\HolaMundoWF.exe.config
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\bin\Debug\HolaMundoWF.exe
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\bin\Debug\HolaMundoWF.pdb
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\obj\Debug\HolaMundoWF.csproj.AssemblyReference.cache
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\obj\Debug\HolaMundoWF.Form1.resources
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\obj\Debug\HolaMundoWF.Properties.Resources.resources
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\obj\Debug\HolaMundoWF.csproj.GenerateResource.cache
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\obj\Debug\HolaMundoWF.csproj.CoreCompileInputs.cache
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\obj\Debug\HolaMundoWF.exe
+C:\Users\aguil\source\bootcamp\TichOct2023\HolaMundoWF\HolaMundoWF\obj\Debug\HolaMundoWF.pdb
